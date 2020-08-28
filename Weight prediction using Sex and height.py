@@ -7,8 +7,8 @@ Original file is located at
     https://colab.research.google.com/drive/1YnPEwh8S0G7mhLB51xfj4upmHbwrF9PK
 """
 
-from google.colab import files
-a=files.upload()
+#from google.colab import files
+#a=files.upload()
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -32,8 +32,6 @@ reg=LinearRegression()
 reg.fit(x_train,y_train)
 
 pred_y=reg.predict(x_test)
-pred_y[[0,67]]
-
 print('r square error=',metrics.r2_score(y_test,pred_y))
 print('mean square error=',metrics.mean_squared_error(y_test,pred_y))
 print('mean absolute error=',metrics.mean_absolute_error(y_test,pred_y))
@@ -41,7 +39,7 @@ print('mean absolute error=',metrics.mean_absolute_error(y_test,pred_y))
 gender=int(input())
 height=int(input())
 prediction=reg.predict([[gender,height]])
-prediction
+print(prediction)
 
 
 
