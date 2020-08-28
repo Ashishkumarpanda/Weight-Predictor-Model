@@ -50,6 +50,6 @@ plt.title("Height vs Weight plot")
 plt.show()
 
 #For new Prediction
-x=int(input())
-prediction=reg.predict([[x]])
+k=int(input())
+prediction=reg.predict([[k]])
 prediction
