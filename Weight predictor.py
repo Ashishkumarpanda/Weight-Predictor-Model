@@ -7,8 +7,8 @@ Original file is located at
     https://colab.research.google.com/drive/1Cf_B8Moeyj4fcJoQUaYTkXuKDThHxKjz
 """
 
-from google.colab import files
-a=files.upload()
+#from google.colab import files
+#a=files.upload()
 
 import pandas as pd
 from sklearn.ensemble import RandomForestRegressor
@@ -26,6 +26,7 @@ y=data.iloc[:,1].values
 x=x.reshape(-1,1)
 y=y.reshape(-1,1)
 
+#checking null data
 data.isnull().sum()
 
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.33, random_state=42)
@@ -35,6 +36,7 @@ reg.fit(x_train,y_train)
 
 pred_y=reg.predict(x_test)
 
+#calculating both r_square and min_square error
 print('R square error=',metrics.r2_score(y_test,pred_y))
 print('min square error=',metrics.mean_squared_error(y_test,pred_y))
 
