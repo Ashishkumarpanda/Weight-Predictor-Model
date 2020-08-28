@@ -48,3 +48,8 @@ plt.xlabel("Height")
 plt.ylabel("Weight")
 plt.title("Height vs Weight plot")
 plt.show()
+
+#For new Prediction
+x=int(input())
+prediction=reg.predict([[x]])
+prediction
